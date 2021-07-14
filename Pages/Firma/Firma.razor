@@ -1,0 +1,11 @@
+﻿@page "/firma"
+@using SignatureGenerator.Shared.Components.Signature
+
+<Card Client="Client"></Card>
+<h3>Firma</h3>
+<EditForm Model="Client">
+    <InputText @bind-Value="Client.Name"></InputText>
+</EditForm>
+@code {
+
+}
