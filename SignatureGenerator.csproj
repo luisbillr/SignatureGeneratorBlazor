@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <Folder Include="Pages\Signature\" />
-    <Folder Include="Shared\Components\Clients\" />
   </ItemGroup>
 
 </Project>

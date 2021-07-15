@@ -1,0 +1,28 @@
+﻿
+<div class="col-md-12">
+    
+    <EditForm Model="Client">
+        <div class="shadow p-3 mb-1 bg-white rounded">
+            <div class="row">
+                <div class="col-md-6">
+                    <input class="form-control" @bind-value="Client.Name" @bind-value:event="oninput" />
+                </div>
+                <div class="col-md-6">
+                    <input class="form-control" @bind-value="Client.Description" @bind-value:event="oninput" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <input class="form-control" @bind-value="Client.PhoneNumber" @bind-value:event="oninput" />
+                </div>
+                <div class="col-md-6">
+                    <input class="form-control" @bind-value="Client.Email" @bind-value:event="oninput" />
+                </div>
+            </div>
+          </div>
+    </EditForm>
+</div>
+
+@code {
+
+}
