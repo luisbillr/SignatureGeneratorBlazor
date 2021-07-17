@@ -1,23 +1,25 @@
-﻿<h3>Card</h3>
-<EditForm Model="Client">
-    <div class="shadow p-3 mb-1 bg-white rounded">
+﻿
+<EditForm Model="Client" class="shadow bg-white rounded">
+    <div class=" p-3 mb-1 bg-white rounded" id="Signature" name="Signature" >
+
         <div class="row">
             <div class="col-md-12">
                 <table>
                     <tr>
                         <td>
-                            <img src="/Images/avatar-disabled.svg" width="80" height="80" alt="" />
+                            <img src="/Images/avatar-disabled.svg" width="80" height="80" alt="" style="margin-right:15px;"/>
                         </td>
                         <td>
-                            <b style="margin: 6px 0px 0px 0px;"> <i></i>@Client.Name</b>
-                            <p style="margin: 0px 6px 0px 0px;" class="font-weight-light">@Client.Description</p>
+                            <b style="margin: 6px 0px 0px 0px; font-size:24px;"> <i></i>@Client.Name</b>
+                            <p style="margin: 0px 6px 0px 0px; font-size:14px; color:gray;" class="font-weight-light">@Client.Description</p>
                         </td>
                         <td>
                             <div class="color-signature-line" style=" background-color: @Signatures.Color; border: 2px solid @Signatures.Color;"></div>
                         </td>
                         <td>
                             <p style="margin: 6px 0px 0px 0px;"><i class="fa fa-phone" style="color:@Signatures.Color; "></i> @Client.PhoneNumber</p>
-                            <p style="margin: 0px 6px 0px 0px;"> <i class="fa fa-location-arrow" style="color:@Signatures.Color;"></i> @Client.Email</p>
+                            <p style="margin: 0px 6px 0px 0px;"> <i class="fa fa-map-marker" style="color:@Signatures.Color;"></i> @Client.Address</p>
+                            @*<p style="margin: 0px 6px 0px 0px;"> <i class="fa fa-map-marker" style="color:@Signatures.Color;"></i> @Client.Email</p>*@
                         </td>
                     </tr>
                 </table>
@@ -25,17 +27,7 @@
         </div>
         
     </div>
-    <div class="shadow p-3 mb-5 bg-white rounded">
-        <div class="row">
-            <div class="col-md-12 text-center"  >
-                <span class="dot" style="background-color:#368488;" @onclick="@(e => Signatures.Color = "#368488")"></span>
-                <span class="dot" style="background-color:slategrey;" @onclick="@(e => Signatures.Color = "slategrey")"></span>
-                <span class="dot" style="background-color:dodgerblue;"  @onclick="@(e => Signatures.Color = "dodgerblue")"></span>
-                <span class="dot" style="background-color:darkred;"  @onclick="@(e => Signatures.Color = "darkred")"></span>
-                <span class="dot" style="background-color:pink;"  @onclick="@(e => Signatures.Color = "pink")"></span>
-            </div>
-        </div>
-    </div>
+
 </EditForm>
 
 @code {

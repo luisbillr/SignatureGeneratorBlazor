@@ -9,25 +9,36 @@
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
     <link href="SignatureGenerator.styles.css" rel="stylesheet" />
-    <link href="css/font-awesome-all.css" rel="stylesheet" />
-   
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
+
+        .color-signature-line {
+            width: 4px;
+            height: 85px;
+            box-sizing: border-box;
+            border-radius: 50px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
         .dot {
             height: 25px;
             width: 25px;
             /*background-color: #bbb;*/
             border-radius: 50%;
             display: inline-block;
+            transition: transform .2s;
+            border-collapse: separate;
+            border-spacing: 10px 5px;
+            border-color:red;
         }
-        .color-signature-line {
-            width: 4px;
-            height: 85px;
-            box-sizing: border-box;
-            border-radius: 50px;
-            margin-left:10px;
-            margin-right:10px;
+        .dot.IsColorChecked {
+            border: solid;
         }
+        .dot:hover {
+            transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+   
     </style>
 </head>
 
@@ -40,6 +51,12 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script src="html2canvas/html2canvas.js"></script>
+    <script src="JSUtils.js"></script>
+    <script>
+    
+     
+    </script>
 </body>
 
 </html>

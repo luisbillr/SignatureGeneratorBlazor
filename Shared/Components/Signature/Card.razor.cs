@@ -12,6 +12,7 @@ namespace SignatureGenerator.Shared.Components.Signature
    
         [Parameter]
         public Client Client { get; set; }
+        [Parameter]
         public Entities.Signature Signatures { get; set; }
         protected override async Task OnInitializedAsync()
         {
