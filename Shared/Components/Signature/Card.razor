@@ -7,7 +7,11 @@
                 <table>
                     <tr>
                         <td>
-                            <img src="/Images/avatar-disabled.svg" width="80" height="80" alt="" style="margin-right:15px;"/>
+                            <form>
+                                <img onclick="CargarImagen();" id="imageCard" src="/Images/avatar-disabled.svg"  width="80" height="80" alt="" style="margin-right:15px; object-fit: cover;" />
+                                <input type="image" name="name" value="" id="MyImage" style="display:none;" />
+                            </form>
+                            
                         </td>
                         <td>
                             <b style="margin: 6px 0px 0px 0px; font-size:24px;"> <i></i>@Client.Name</b>
