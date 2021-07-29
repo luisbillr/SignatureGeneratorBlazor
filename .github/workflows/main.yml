@@ -12,7 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-
+ # changes the base-tag in index.html from '/' to 'SignatureGeneratorBlazor' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to SignatureGeneratorBlazor
+      run: sed -i 's/<base href="\/" \/>/<base href="\/SignatureGeneratorBlazor\/" \/>/g' release/wwwroot/index.html
+      
     - name: Publish app
       run: dotnet publish -c Release
 
